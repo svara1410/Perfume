@@ -1,0 +1,62 @@
+<html>
+<html lang="en">
+<head>
+    
+    <title>Perfume Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+           <a href="index.html">Home</a>
+              
+        </nav>
+    </header>
+ 
+
+    <!-- Buy Now Modal -->
+    <div class="modal" id="buy-now-modal">
+        <div class="modal-content">
+            <h2>Buy Now</h2>
+            <p>Enter your payment details to complete your purchase</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <a href="Pay.html">Pay Now</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("buy-now-modal");
+
+        // Get the button that opens the modal
+        var btn = document.querySelectorAll(".buy-now-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.forEach(function(button) {
+            button.addEventListener("click", function() {
+                modal.style.display = "block";
+            });
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        span.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
